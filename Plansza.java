@@ -15,21 +15,28 @@ import java.awt.Color;
 
 public class Plansza extends javax.swing.JFrame {
     public int wartosc=0;
-    public int x,y;
+    public int Mapx,Mapy;
     
-    boolean mouse=false;
+    boolean wpisz=false;
     
-   
-    
-    public void typ() {
+      
+    public void sprawdz() {
+        try {
+            
+            int w=Integer.parseInt((Mapa.getValueAt(Mapa.getSelectedRow(), Mapa.getSelectedColumn()).toString()));
+
+            wpisz=false;
+            
+        } catch (IllegalArgumentException e) {           
         
         if (Masztowiec1.isSelected()) {  
             
             if (Integer.parseInt(Maszt1.getText())==0) {
-                wartosc = 0;           
+                wpisz=false;           
             } else {
                 wartosc=1;
                 Maszt1.setText(Integer.toString(Integer.parseInt(Maszt1.getText())-1));
+                wpisz=true;
             }            
             
         }
@@ -37,10 +44,11 @@ public class Plansza extends javax.swing.JFrame {
         if (Masztowiec2.isSelected()) {  
             
             if (Integer.parseInt(Maszt2.getText())==0) {
-                wartosc = 0;           
+                wpisz=false;           
             } else {
                 wartosc=2;
                 Maszt2.setText(Integer.toString(Integer.parseInt(Maszt2.getText())-1));
+                wpisz=true;
             }            
             
         }
@@ -48,10 +56,11 @@ public class Plansza extends javax.swing.JFrame {
         if (Masztowiec3.isSelected()) {  
             
             if (Integer.parseInt(Maszt3.getText())==0) {
-                wartosc = 0;           
+                wpisz=false;           
             } else {
                 wartosc=3;
                 Maszt3.setText(Integer.toString(Integer.parseInt(Maszt3.getText())-1));
+                wpisz=true;
             }            
             
         }
@@ -59,12 +68,17 @@ public class Plansza extends javax.swing.JFrame {
         if (Masztowiec4.isSelected()) {  
             
             if (Integer.parseInt(Maszt4.getText())==0) {
-                wartosc = 0;           
+                wpisz=false;           
             } else {
                 wartosc=4;
                 Maszt4.setText(Integer.toString(Integer.parseInt(Maszt4.getText())-1));
+                wpisz=true;
             }            
             
+        }
+        
+        } catch (NullPointerException e) {
+            wpisz=false;
         }
         
     }
@@ -114,178 +128,202 @@ public class Plansza extends javax.swing.JFrame {
 
         Mapa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"A", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"B", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"C", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"D", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"E", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"F", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"G", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"H", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"I", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"J", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"K", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {"L", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null},
-                {"M", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null},
-                {"N", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null}
+                {"A", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"B", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"C", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"D", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"E", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"F", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"G", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"H", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"I", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null},
+                {"J", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"K", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {"L", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null},
+                {"M", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null, null, null, null},
+                {"N", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", null, null, null, null, null, null}
             },
             new String [] {
                 "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"
             }
-        ));
-        Mapa.setCellSelectionEnabled(true);
-        Mapa.getTableHeader().setReorderingAllowed(false);
-        Mapa.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                MapaMouseMoved(evt);
-            }
-        });
-        Mapa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MapaMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(Mapa);
-        if (Mapa.getColumnModel().getColumnCount() > 0) {
-            Mapa.getColumnModel().getColumn(0).setMinWidth(20);
-            Mapa.getColumnModel().getColumn(0).setMaxWidth(20);
-            Mapa.getColumnModel().getColumn(1).setResizable(false);
-            Mapa.getColumnModel().getColumn(2).setResizable(false);
-            Mapa.getColumnModel().getColumn(3).setResizable(false);
-            Mapa.getColumnModel().getColumn(4).setResizable(false);
-            Mapa.getColumnModel().getColumn(5).setResizable(false);
-            Mapa.getColumnModel().getColumn(6).setResizable(false);
-            Mapa.getColumnModel().getColumn(7).setResizable(false);
-            Mapa.getColumnModel().getColumn(8).setResizable(false);
-            Mapa.getColumnModel().getColumn(9).setResizable(false);
-            Mapa.getColumnModel().getColumn(10).setResizable(false);
-            Mapa.getColumnModel().getColumn(11).setResizable(false);
-            Mapa.getColumnModel().getColumn(12).setResizable(false);
-            Mapa.getColumnModel().getColumn(13).setResizable(false);
-            Mapa.getColumnModel().getColumn(14).setResizable(false);
-            Mapa.getColumnModel().getColumn(15).setResizable(false);
-            Mapa.getColumnModel().getColumn(16).setResizable(false);
-            Mapa.getColumnModel().getColumn(17).setResizable(false);
-            Mapa.getColumnModel().getColumn(18).setResizable(false);
-            Mapa.getColumnModel().getColumn(19).setResizable(false);
-            Mapa.getColumnModel().getColumn(20).setResizable(false);
-            Mapa.getColumnModel().getColumn(21).setResizable(false);
-            Mapa.getColumnModel().getColumn(22).setResizable(false);
+        )
+        {public boolean isCellEditable(int row, int column){return false;}}
+    );
+    Mapa.setCellSelectionEnabled(true);
+    Mapa.getTableHeader().setReorderingAllowed(false);
+    Mapa.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        public void mouseMoved(java.awt.event.MouseEvent evt) {
+            MapaMouseMoved(evt);
         }
+    });
+    Mapa.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            MapaMouseClicked(evt);
+        }
+    });
+    jScrollPane1.setViewportView(Mapa);
+    if (Mapa.getColumnModel().getColumnCount() > 0) {
+        Mapa.getColumnModel().getColumn(0).setMinWidth(20);
+        Mapa.getColumnModel().getColumn(0).setMaxWidth(20);
+        Mapa.getColumnModel().getColumn(1).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(1).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(2).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(2).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(3).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(3).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(4).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(4).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(5).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(5).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(6).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(6).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(7).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(7).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(8).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(8).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(9).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(9).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(10).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(10).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(11).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(11).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(12).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(12).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(13).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(13).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(14).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(14).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(15).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(15).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(16).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(16).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(17).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(17).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(18).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(18).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(19).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(19).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(20).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(20).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(21).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(21).setMaxWidth(25);
+        Mapa.getColumnModel().getColumn(22).setMinWidth(25);
+        Mapa.getColumnModel().getColumn(22).setMaxWidth(25);
+    }
 
-        Masztowiec1.setText("1-masztowiec  X");
-        Masztowiec1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Masztowiec1ActionPerformed(evt);
-            }
-        });
+    Masztowiec1.setText("1-masztowiec  X");
+    Masztowiec1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            Masztowiec1ActionPerformed(evt);
+        }
+    });
 
-        Masztowiec2.setText("2-masztowiec  X");
-        Masztowiec2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Masztowiec2ActionPerformed(evt);
-            }
-        });
+    Masztowiec2.setText("2-masztowiec  X");
+    Masztowiec2.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            Masztowiec2ActionPerformed(evt);
+        }
+    });
 
-        Masztowiec3.setText("3-masztowiec  X");
-        Masztowiec3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Masztowiec3ActionPerformed(evt);
-            }
-        });
+    Masztowiec3.setText("3-masztowiec  X");
+    Masztowiec3.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            Masztowiec3ActionPerformed(evt);
+        }
+    });
 
-        Masztowiec4.setText("4-masztowiec  X");
-        Masztowiec4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Masztowiec4ActionPerformed(evt);
-            }
-        });
+    Masztowiec4.setText("4-masztowiec  X");
+    Masztowiec4.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            Masztowiec4ActionPerformed(evt);
+        }
+    });
 
-        Jednostki.setText("Jednostki");
+    Jednostki.setText("Jednostki");
 
-        Maszt1.setText("3");
+    Maszt1.setText("3");
 
-        Maszt2.setText("3");
+    Maszt2.setText("3");
 
-        Maszt3.setText("3");
+    Maszt3.setText("3");
 
-        Maszt4.setText("3");
+    Maszt4.setText("3");
 
-        test.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                testActionPerformed(evt);
-            }
-        });
+    test.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            testActionPerformed(evt);
+        }
+    });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 38, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Masztowiec1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Maszt1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Masztowiec3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Maszt3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Masztowiec2)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addComponent(Jednostki))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Maszt2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Masztowiec4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Maszt4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(test1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Jednostki)
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addComponent(Masztowiec1)
-                    .addComponent(Maszt1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Masztowiec2)
-                    .addComponent(Maszt2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(Maszt1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createSequentialGroup()
                     .addComponent(Masztowiec3)
-                    .addComponent(Maszt3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(Maszt3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(Masztowiec2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(57, 57, 57)
+                            .addComponent(Jednostki))
+                        .addGroup(layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Maszt2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createSequentialGroup()
                     .addComponent(Masztowiec4)
-                    .addComponent(Maszt4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(test)
-                    .addComponent(test1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(Maszt4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addContainerGap(346, Short.MAX_VALUE)
+            .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(36, 36, 36)
+            .addComponent(test1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(100, 100, 100))
+        .addGroup(layout.createSequentialGroup()
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 0, Short.MAX_VALUE))
+    );
+    layout.setVerticalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(Jednostki)
+            .addGap(22, 22, 22)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Masztowiec1)
+                .addComponent(Maszt1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Masztowiec2)
+                .addComponent(Maszt2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Masztowiec3)
+                .addComponent(Maszt3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Masztowiec4)
+                .addComponent(Maszt4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(27, 27, 27)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(test)
+                .addComponent(test1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap())
+    );
 
-        pack();
+    pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Masztowiec1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Masztowiec1ActionPerformed
@@ -313,11 +351,9 @@ public class Plansza extends javax.swing.JFrame {
     }//GEN-LAST:event_testActionPerformed
 
     private void MapaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MapaMouseClicked
-
-        typ();
-        if (wartosc==0) {
-            
-        } else {
+        
+        sprawdz();
+        if (wpisz) {
             Mapa.setSelectionBackground(Color.green);
             Mapa.setValueAt(wartosc, Mapa.getSelectedRow(), Mapa.getSelectedColumn());
         }
@@ -325,17 +361,24 @@ public class Plansza extends javax.swing.JFrame {
             //Mapa.getColumnModel().getColumn(4).setCellRenderer(new StatusColumnCellRenderer());
         
         //test.setText(Integer.toString(Mapa.getSelectedRow()));
-        test.setText(Mapa.getSelectionBackground().toString());
+        //test.setText(Mapa.getSelectionBackground().toString());
     }//GEN-LAST:event_MapaMouseClicked
 
     private void MapaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MapaMouseMoved
+        int x=21,y;
         if (evt.getX()>20) {
             x=evt.getX();
         }
         y=evt.getY();
-        //evt.consume();
         
-            test.setText(Integer.toString(x));
+        Mapx = ((x-21)/25)+1;
+        Mapy = y/16;
+        
+        //Mapa.setValueAt("#", Mapy, Mapx);
+        //Mapa.addColumnSelectionInterval(Mapx, Mapx+1);
+        Mapa.changeSelection(Mapy, Mapx, false, false);
+        
+            test.setText(Integer.toString(y));
 
         
     }//GEN-LAST:event_MapaMouseMoved

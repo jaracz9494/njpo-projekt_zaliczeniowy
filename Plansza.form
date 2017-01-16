@@ -28,10 +28,6 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="jScrollPane1" min="-2" pref="600" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -66,11 +62,15 @@
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="346" max="32767" attributes="0"/>
               <Component id="test" min="-2" pref="89" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="test1" min="-2" pref="67" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jScrollPane1" min="-2" pref="570" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -120,272 +120,8 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="Mapa">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="23" rowCount="14">
-                <Column editable="true" title="" type="java.lang.Object">
-                  <Data value="A"/>
-                  <Data value="B"/>
-                  <Data value="C"/>
-                  <Data value="D"/>
-                  <Data value="E"/>
-                  <Data value="F"/>
-                  <Data value="G"/>
-                  <Data value="H"/>
-                  <Data value="I"/>
-                  <Data value="J"/>
-                  <Data value="K"/>
-                  <Data value="L"/>
-                  <Data value="M"/>
-                  <Data value="N"/>
-                </Column>
-                <Column editable="true" title="1" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="2" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="3" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="4" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="5" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="6" type="java.lang.Object">
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="7" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="8" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="9" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="10" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="11" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="12" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="13" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="14" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="15" type="java.lang.Object">
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="-"/>
-                </Column>
-                <Column editable="true" title="16" type="java.lang.Object"/>
-                <Column editable="true" title="17" type="java.lang.Object"/>
-                <Column editable="true" title="18" type="java.lang.Object"/>
-                <Column editable="true" title="19" type="java.lang.Object"/>
-                <Column editable="true" title="20" type="java.lang.Object"/>
-                <Column editable="true" title="21" type="java.lang.Object"/>
-                <Column editable="true" title="22" type="java.lang.Object"/>
-              </Table>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {&quot;A&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;B&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;C&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;D&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;E&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;F&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;G&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;H&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;I&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;J&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;K&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;L&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;M&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null, null, null, null},&#xa;        {&quot;N&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, &quot;-&quot;, null, null, null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;14&quot;, &quot;15&quot;, &quot;16&quot;, &quot;17&quot;, &quot;18&quot;, &quot;19&quot;, &quot;20&quot;, &quot;21&quot;, &quot;22&quot;&#xa;    }&#xa;)&#xa;{public boolean isCellEditable(int row, int column){return false;}}&#xa;" type="code"/>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -395,112 +131,112 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                <Column maxWidth="25" minWidth="25" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
