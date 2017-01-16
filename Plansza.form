@@ -138,21 +138,246 @@
                   <Data value="M"/>
                   <Data value="N"/>
                 </Column>
-                <Column editable="true" title="1" type="java.lang.Object"/>
-                <Column editable="true" title="2" type="java.lang.Object"/>
-                <Column editable="true" title="3" type="java.lang.Object"/>
-                <Column editable="true" title="4" type="java.lang.Object"/>
-                <Column editable="true" title="5" type="java.lang.Object"/>
-                <Column editable="true" title="6" type="java.lang.Object"/>
-                <Column editable="true" title="7" type="java.lang.Object"/>
-                <Column editable="true" title="8" type="java.lang.Object"/>
-                <Column editable="true" title="9" type="java.lang.Object"/>
-                <Column editable="true" title="10" type="java.lang.Object"/>
-                <Column editable="true" title="11" type="java.lang.Object"/>
-                <Column editable="true" title="12" type="java.lang.Object"/>
-                <Column editable="true" title="13" type="java.lang.Object"/>
-                <Column editable="true" title="14" type="java.lang.Object"/>
-                <Column editable="true" title="15" type="java.lang.Object"/>
+                <Column editable="true" title="1" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="2" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="3" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="4" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="5" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="6" type="java.lang.Object">
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="7" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="8" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="9" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="10" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="11" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="12" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="13" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="14" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                </Column>
+                <Column editable="true" title="15" type="java.lang.Object">
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="-"/>
+                </Column>
                 <Column editable="true" title="16" type="java.lang.Object"/>
                 <Column editable="true" title="17" type="java.lang.Object"/>
                 <Column editable="true" title="18" type="java.lang.Object"/>
@@ -287,6 +512,7 @@
             </Property>
           </Properties>
           <Events>
+            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="MapaMouseMoved"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MapaMouseClicked"/>
           </Events>
         </Component>
@@ -294,7 +520,7 @@
     </Container>
     <Component class="javax.swing.JRadioButton" name="Masztowiec1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1-masztowiec"/>
+        <Property name="text" type="java.lang.String" value="1-masztowiec  X"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Masztowiec1ActionPerformed"/>
@@ -302,7 +528,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="Masztowiec2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2-masztowiec"/>
+        <Property name="text" type="java.lang.String" value="2-masztowiec  X"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Masztowiec2ActionPerformed"/>
@@ -310,7 +536,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="Masztowiec3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3-masztowiec"/>
+        <Property name="text" type="java.lang.String" value="3-masztowiec  X"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Masztowiec3ActionPerformed"/>
@@ -318,7 +544,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="Masztowiec4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="4-masztowiec"/>
+        <Property name="text" type="java.lang.String" value="4-masztowiec  X"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Masztowiec4ActionPerformed"/>
