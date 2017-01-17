@@ -1,6 +1,7 @@
 package projekt_zaliczeniowy;
 
 import java.awt.Color;
+import static java.lang.Math.abs;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,17 +20,16 @@ public class Plansza extends javax.swing.JFrame {
     public int Mapx,Mapy;
     public int Statkicount=0, Pojazdycount=0;
     
-    boolean wpiszStatek=false;
-    boolean wpiszPojazd=false;
+    boolean start=true;
+    boolean wpiszStatek=false, wpiszPojazd=false;
     boolean ustawianie=true;
-    boolean statekisselected=false;
-    boolean pojazdisselected=false;
+    boolean statekisselected=false, pojazdisselected=false;
     
     Statek[] statki = new Statek[6];
     Pojazd[] pojazdy = new Pojazd[4];
     
     Statek[] statkiwroga = new Statek[5];
-    Pojazd[] pojazdywroga = new Pojazd[6];
+    Pojazd[] pojazdywroga = new Pojazd[6];   
     
     public boolean Stateknachodzi() {
         
@@ -198,18 +198,39 @@ public class Plansza extends javax.swing.JFrame {
             if (statki[i].pozx==Mapx && statki[i].pozy==Mapy) {
                 statekisselected=true;               
                 wartosc = statki[i].id;
+                Mapa.setSelectionBackground(Color.yellow);
+            }
+        }
+        
+        for (int i=0; i<Pojazdycount; i++) {
+            if (pojazdy[i].pozx==Mapx && pojazdy[i].pozy==Mapy) {
+                pojazdisselected=true;               
+                wartosc = pojazdy[i].id;
+                Mapa.setSelectionBackground(Color.yellow);
             }
         }
     }
     
     public void oznacz() {
-        if (!(statki[wartosc].pozx==Mapx && statki[wartosc].pozy==Mapy) && Mapa.getValueAt(Mapy, Mapx)=="-"){
+        if (statekisselected && !(statki[wartosc].pozx==Mapx && statki[wartosc].pozy==Mapy) && Mapa.getValueAt(Mapy, Mapx)=="-" && (abs(statki[wartosc].pozx-Mapx)<2 && abs(statki[wartosc].pozy-Mapy)<2)){
             Mapa.setSelectionBackground(Color.green);
             wpiszStatek=true;
         } else {
-            Mapa.setSelectionBackground(Color.red);
-            wpiszStatek=false;
-        }
+            if (pojazdisselected && !(pojazdy[wartosc].pozx==Mapx && pojazdy[wartosc].pozy==Mapy) && Mapa.getValueAt(Mapy, Mapx)==null && (abs(pojazdy[wartosc].pozx-Mapx)<2 && abs(pojazdy[wartosc].pozy-Mapy)<2)){
+                Mapa.setSelectionBackground(Color.green);
+                wpiszPojazd=true;
+            } else {
+                if ((statekisselected && (statki[wartosc].pozx==Mapx && statki[wartosc].pozy==Mapy)) || pojazdisselected && (pojazdy[wartosc].pozx==Mapx && pojazdy[wartosc].pozy==Mapy)) {
+                    Mapa.setSelectionBackground(Color.yellow);
+                    wpiszStatek=false;
+                    wpiszPojazd=false;
+                } else {
+                    Mapa.setSelectionBackground(Color.red);
+                    wpiszStatek=false;
+                    wpiszPojazd=false;
+                }
+            }
+        }           
     }
     
     // USUNIETO Z SPODU W WARUNKU:
@@ -222,6 +243,14 @@ public class Plansza extends javax.swing.JFrame {
             statekisselected=false;
             wpiszStatek=false;
         }
+        
+        if (pojazdisselected && wpiszPojazd) {
+            Mapa.setValueAt(null, pojazdy[wartosc].pozy, pojazdy[wartosc].pozx);
+            pojazdy[wartosc].setpozycje(Mapx, Mapy);
+            Mapa.setValueAt("#"+pojazdy[wartosc].typ, Mapy, Mapx);
+            pojazdisselected=false;
+            wpiszPojazd=false;
+        }
     }
     
 
@@ -233,6 +262,7 @@ public class Plansza extends javax.swing.JFrame {
      * Creates new form Plansza
      */
     public Plansza() {
+        
         initComponents();
         
         grupa.add(Masztowiec1);
@@ -596,6 +626,11 @@ public class Plansza extends javax.swing.JFrame {
     }//GEN-LAST:event_MapaMouseClicked
 
     private void MapaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MapaMouseMoved
+        if (start) {
+        pojazdywroga[0] = new Pojazd();
+        pojazdywroga[0].ustaw(3,10,0,0);  
+        start=false;
+        }
         
         int x=21,y;       
         if (evt.getX()>20) {
@@ -604,17 +639,20 @@ public class Plansza extends javax.swing.JFrame {
         y=evt.getY();
         
         Mapx = ((x-21)/25)+1;
-        Mapy = y/16;
-        
+        Mapy = y/16;        
         Mapa.changeSelection(Mapy, Mapx, false, false);
         
         
-        if (statekisselected) {
+        if (!statekisselected && !pojazdisselected) {
+            Mapa.setSelectionBackground(Color.BLUE);
+        }
+        
+        if (statekisselected || pojazdisselected) {
             oznacz();
         }
         
-            //test.setText(Integer.toString(y));
-
+            //test.setText(Integer.toString(Mapy));
+            test.setText(Integer.toString(pojazdywroga[0].pozx));
         
     }//GEN-LAST:event_MapaMouseMoved
 
@@ -634,6 +672,7 @@ public class Plansza extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        System.out.println();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
