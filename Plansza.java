@@ -43,23 +43,22 @@ public class Plansza extends javax.swing.JFrame {
     }
     
       
-    public void sprawdz() {
-        try {
-            
-            int w=Integer.parseInt((Mapa.getValueAt(Mapy, Mapx).toString()));
-
-            wpiszStatek=false;
-            wpiszPojazd=false;
-            Mapa.setSelectionBackground(Color.red);
-            
-        } catch (IllegalArgumentException e) {           
+    public void sprawdz() {                   
         
-        wpiszPojazd=false;
-        Mapa.setSelectionBackground(Color.red);
-        
-        if (Stateknachodzi()) {
-            wpiszStatek=false;
+        if (Mapa.getValueAt(Mapy, Mapx)=="-") {
+            wpiszStatek = true;
         } else {
+            wpiszStatek = false;
+        }
+        
+        if (Mapa.getValueAt(Mapy, Mapx)==null) {
+            wpiszPojazd = true;
+        } else {
+            wpiszPojazd = false;
+        }
+        
+        if (wpiszStatek) {
+            wpiszStatek=false;
             
         if (Masztowiec1.isSelected()) {  
             
@@ -118,16 +117,14 @@ public class Plansza extends javax.swing.JFrame {
                 }
                 wpiszStatek=true;
             }            
-            
         }
         }
-        
-        } catch (NullPointerException e) {
+
             
-            wpiszStatek=false;
-            Mapa.setSelectionBackground(Color.red);
+        if (wpiszPojazd) {
+            wpiszPojazd=false;
             
-            if (Pojazd1.isSelected()) {  
+        if (Pojazd1.isSelected()) {  
             
             if (Integer.parseInt(Poj1.getText())==0) {
                 wpiszPojazd=false;           
@@ -138,10 +135,10 @@ public class Plansza extends javax.swing.JFrame {
                     Pojazd1.setEnabled(false);
                 }
                 wpiszPojazd=true;
-            }            
-            
+            }                       
         }
-            if (Pojazd2.isSelected()) {  
+       
+        if (Pojazd2.isSelected()) {  
             
             if (Integer.parseInt(Poj2.getText())==0) {
                 wpiszPojazd=false;           
@@ -156,7 +153,7 @@ public class Plansza extends javax.swing.JFrame {
             
         }       
             
-            if (Pojazd3.isSelected()) {  
+        if (Pojazd3.isSelected()) {  
             
             if (Integer.parseInt(Poj3.getText())==0) {
                 wpiszPojazd=false;           
@@ -171,7 +168,7 @@ public class Plansza extends javax.swing.JFrame {
             
         }
             
-            if (Pojazd4.isSelected()) {  
+        if (Pojazd4.isSelected()) {  
             
             if (Integer.parseInt(Poj4.getText())==0) {
                 wpiszPojazd=false;           
