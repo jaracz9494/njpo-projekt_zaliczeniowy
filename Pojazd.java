@@ -10,10 +10,16 @@ package projekt_zaliczeniowy;
  * @author Dominik
  */
 public class Pojazd extends Plansza {
-    int typ, pozx, pozy;
+    int typ, pozx, pozy, id;
     
-    public void ustaw(int typ, int pozx, int pozy) {
+    public void ustaw(int typ, int pozx, int pozy, int id) {
         this.typ=typ;
+        this.pozx=pozx;
+        this.pozy=pozy;
+        this.id=id;
+    }
+    
+    public void setpozycje(int pozx, int pozy) {
         this.pozx=pozx;
         this.pozy=pozy;
     }

@@ -239,7 +239,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Maszt1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -247,7 +247,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Maszt2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -255,7 +255,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Maszt3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -304,22 +304,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Poj1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="Ruch">

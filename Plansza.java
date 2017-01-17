@@ -14,6 +14,7 @@ import java.awt.Color;
 
 
 public class Plansza extends javax.swing.JFrame {
+    
     public int wartosc=0;
     public int Mapx,Mapy;
     public int Statkicount=0, Pojazdycount=0;
@@ -21,9 +22,11 @@ public class Plansza extends javax.swing.JFrame {
     boolean wpiszStatek=false;
     boolean wpiszPojazd=false;
     boolean ustawianie=true;
+    boolean statekisselected=false;
+    boolean pojazdisselected=false;
     
-    Statek[] statki = new Statek[9];
-    Pojazd[] pojazdy = new Pojazd[10];
+    Statek[] statki = new Statek[6];
+    Pojazd[] pojazdy = new Pojazd[4];
     
     Statek[] statkiwroga = new Statek[5];
     Pojazd[] pojazdywroga = new Pojazd[6];
@@ -187,6 +190,40 @@ public class Plansza extends javax.swing.JFrame {
         
     }
     
+    
+    
+    
+    public void wybierz() {
+        for (int i=0; i<Statkicount; i++) {
+            if (statki[i].pozx==Mapx && statki[i].pozy==Mapy) {
+                statekisselected=true;               
+                wartosc = statki[i].id;
+            }
+        }
+    }
+    
+    public void oznacz() {
+        if (!(statki[wartosc].pozx==Mapx && statki[wartosc].pozy==Mapy) && Mapa.getValueAt(Mapy, Mapx)=="-"){
+            Mapa.setSelectionBackground(Color.green);
+            wpiszStatek=true;
+        } else {
+            Mapa.setSelectionBackground(Color.red);
+            wpiszStatek=false;
+        }
+    }
+    
+    // USUNIETO Z SPODU W WARUNKU:
+    //!(statki[wartosc].pozx==Mapx && statki[wartosc].pozy==Mapy) && Mapa.getValueAt(Mapy, Mapx)=="-"
+    public void przesun() {
+        if (statekisselected && wpiszStatek) {
+            Mapa.setValueAt("-", statki[wartosc].pozy, statki[wartosc].pozx);
+            statki[wartosc].setpozycje(Mapx, Mapy);
+            Mapa.setValueAt("+"+statki[wartosc].typ, Mapy, Mapx);
+            statekisselected=false;
+            wpiszStatek=false;
+        }
+    }
+    
 
     
     
@@ -318,11 +355,11 @@ public class Plansza extends javax.swing.JFrame {
 
     Jednostki.setText("Jednostki");
 
-    Maszt1.setText("3");
+    Maszt1.setText("2");
 
-    Maszt2.setText("3");
+    Maszt2.setText("2");
 
-    Maszt3.setText("2");
+    Maszt3.setText("1");
 
     Maszt4.setText("1");
 
@@ -350,13 +387,13 @@ public class Plansza extends javax.swing.JFrame {
 
     Pojazd4.setText("Pojazd 4-osobowy  X");
 
-    Poj1.setText("3");
+    Poj1.setText("1");
 
-    Poj2.setText("3");
+    Poj2.setText("1");
 
-    Poj3.setText("2");
+    Poj3.setText("1");
 
-    Poj4.setText("2");
+    Poj4.setText("1");
 
     Ruch.setText("Ruch");
     Ruch.setEnabled(false);
@@ -513,7 +550,7 @@ public class Plansza extends javax.swing.JFrame {
         if (wpiszStatek) {
             
             statki[Statkicount] = new Statek();
-            statki[Statkicount].ustaw(wartosc,Mapx,Mapy);
+            statki[Statkicount].ustaw(wartosc,Mapx,Mapy,Statkicount);
             Statkicount+=1;
             
             Mapa.setSelectionBackground(Color.green);
@@ -523,7 +560,7 @@ public class Plansza extends javax.swing.JFrame {
         }
         if (wpiszPojazd) {
             pojazdy[Pojazdycount] = new Pojazd();
-            pojazdy[Pojazdycount].ustaw(wartosc,Mapx,Mapy);
+            pojazdy[Pojazdycount].ustaw(wartosc,Mapx,Mapy,Pojazdycount);
             Pojazdycount+=1;
             
             Mapa.setSelectionBackground(Color.green);
@@ -531,14 +568,24 @@ public class Plansza extends javax.swing.JFrame {
             Mapa.setValueAt("#"+wartosc, Mapy, Mapx);
         }
         
-        if (Statkicount+Pojazdycount==19) {
+        if (Statkicount+Pojazdycount==statki.length+pojazdy.length) {
+            
             System.out.println("ok, do dzieła!");
-            ustawianie = false;
+            
+            ustawianie = false;            
+            wpiszStatek=false;
+            wpiszPojazd=false;
             Ruch.setEnabled(true);
             Strzal.setEnabled(true);
         }
         
-    } else {    
+    } else {        
+        
+        if (Ruch.isSelected()) {
+            wybierz();
+            przesun();
+        }
+        
         System.out.println("yep");
         
     }    
@@ -550,8 +597,7 @@ public class Plansza extends javax.swing.JFrame {
 
     private void MapaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MapaMouseMoved
         
-        int x=21,y;
-        
+        int x=21,y;       
         if (evt.getX()>20) {
             x=evt.getX();
         }
@@ -560,9 +606,12 @@ public class Plansza extends javax.swing.JFrame {
         Mapx = ((x-21)/25)+1;
         Mapy = y/16;
         
-        //Mapa.setValueAt("#", Mapy, Mapx);
-        //Mapa.addColumnSelectionInterval(Mapx, Mapx+1);
         Mapa.changeSelection(Mapy, Mapx, false, false);
+        
+        
+        if (statekisselected) {
+            oznacz();
+        }
         
             //test.setText(Integer.toString(y));
 
