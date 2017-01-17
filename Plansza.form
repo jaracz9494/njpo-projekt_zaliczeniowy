@@ -29,112 +29,129 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane1" min="-2" pref="575" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="575" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="Masztowiec1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Maszt1" min="-2" pref="41" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Pojazd1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Poj1" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Masztowiec3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Maszt3" min="-2" pref="41" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Pojazd3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Poj3" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Masztowiec2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Maszt2" min="-2" pref="41" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Pojazd2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Poj2" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Masztowiec4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Maszt4" min="-2" pref="41" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Pojazd4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Poj4" min="-2" pref="20" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                      <Component id="Jednostki" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="Ruch" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="Strzal" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="Masztowiec1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Maszt1" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Pojazd1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Poj1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Masztowiec3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Maszt3" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Pojazd3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Poj3" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Masztowiec2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Maszt2" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Pojazd2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Poj2" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Masztowiec4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Maszt4" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Pojazd4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Poj4" min="-2" pref="20" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="test" min="-2" pref="89" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="test1" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                              <Component id="Jednostki" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="Akcja" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                              <Component id="Akcja" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Ruch" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="LiczbaOddanychStrzalow" min="-2" pref="158" max="-2" attributes="0"/>
+                                  <Component id="Strzal" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SzansaTrafienia" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="LiczbaStrzalow" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Zapisz" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Odczyt" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane1" min="-2" pref="252" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jScrollPane1" min="-2" pref="252" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Jednostki" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Akcja" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="Jednostki" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="Akcja" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Masztowiec1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Maszt1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="Pojazd1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Poj1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Masztowiec2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Maszt2" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="Pojazd2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Poj2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-              </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Masztowiec1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Maszt1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="Pojazd1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Poj1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Ruch" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Strzal" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Masztowiec2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Maszt2" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="Pojazd2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Poj2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Ruch" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Strzal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="SzansaTrafienia" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -142,6 +159,7 @@
                   <Component id="Maszt3" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="Pojazd3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Poj3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LiczbaOddanychStrzalow" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -149,13 +167,14 @@
                   <Component id="Maszt4" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="Pojazd4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Poj4" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="test" max="32767" attributes="0"/>
-                  <Component id="test1" max="32767" attributes="0"/>
+                  <Component id="LiczbaStrzalow" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Zapisz" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Odczyt" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -239,7 +258,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Maszt1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -269,13 +288,6 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="test">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="test1">
-    </Component>
     <Component class="javax.swing.JRadioButton" name="Pojazd1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pojazd 1-osobowy  X"/>
@@ -304,17 +316,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Poj1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Poj4">
@@ -340,6 +352,56 @@
     <Component class="javax.swing.JLabel" name="Akcja">
       <Properties>
         <Property name="text" type="java.lang.String" value="Akcja"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="SzansaTrafienia">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SzansaTrafieniaActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="BETAv0.21&#xa;&#x9;Zasady:&#xa;Znak: &quot;-&quot;:&#xa;-woda&#xa;-mozna postawic na niej okr&#x119;ty &#xa;i tylko one mog&#x105; si&#x119; po niej porusza&#x107;&#xa;&#xa;Znak: &quot; &quot;:&#xa;-ziemia&#xa;-analogicznie jak do okr&#x119;t&#xf3;w &#xa;(mog&#x105; na niej by&#x107; tylko pojazdy) :)&#xa;&#xa;Znak: &quot;#1&quot;:&#xa;-od cyfry 1 do 4 oznacza&#xa;pojazd l&#x105;dowy&#xa;&#xa;Znak: &quot;+1&quot;:&#xa;-od cyfry 1 do 4 oznacza&#xa;okr&#x119;t&#xa;&#xa;Po umieszczeniu wszystkich jednostek&#xa;rozpoczyna si&#x119; bitwa&#xa;&#xa;Chwilowo z braku Sztucznej&#xa;Inteligencji przeciwnicy&#xa;umieszczeni s&#x105; w lini: A&#xa;&#xa;Ruch:&#xa;-Pojazdy i Statki mog&#x105; si&#x119;&#xa;poruszyc tylko na odleg&#x142;o&#x15b;&#x107;&#xa;1 kratki.&#xa;Mo&#x17c;liwe przesunieci&#x119;&#xa;oznaczone jest polem ZIELONYM.&#xa;Na pola koloru CZERWONEGO nie&#xa;mo&#x17c;na si&#x119; przemie&#x15b;ci&#x107;.&#xa;&#xa;Strza&#x142;:&#xa;-Po wybraniu jednostki&#xa;oznacza sie ona polem &#x17b;&#xd3;&#x141;TYM.&#xa;Pola ZIELONE oznaczaj&#x105;&#xa;mo&#x17c;liwo&#x15b;&#x107; oddania strza&#x142;u.&#xa;Pola CZERWONE oznaczaj&#x105; brak&#xa;strza&#x142;u."/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="LiczbaOddanychStrzalow">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Liczba oddanych strzalow:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LiczbaStrzalow">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Zapisz">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Zapisz"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ZapiszActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Odczyt">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Odczyt"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
   </SubComponents>

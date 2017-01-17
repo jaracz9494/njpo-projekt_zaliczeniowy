@@ -24,7 +24,15 @@ public class Pojazd extends Plansza {
         this.pozy=pozy;
     }
     
+    public void ustawtyp(int typ) {
+        this.typ=typ;
+    }
+    
     public void wyswietl(){
         System.out.println("typ: " + typ + " X: " + pozx + " Y: " + pozy);
+    }
+    
+    public String dane() {
+        return ("Pojazd: " + typ + " " + pozx + " " +  pozy + " " + id + " \n");
     }
 }
